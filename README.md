@@ -1,6 +1,10 @@
 # RedTeaming Framework by Open-Sec
 
-Este framework fue desarrollado por el team de Open-Sec como una forma de estandarizar las acciones realizadas durante las operaciones de red teaming que realizamos para organizaciones diversas y contar con un medio de comunicación e integración de los red teamers y sus labores.
+Teniendo claramente establecida la diferencia entre Emulación de Amenazas y Simulación de Adversarios, este framework fue desarrollado por el team de Open-Sec como una forma de estandarizar las acciones realizadas durante las operaciones de red teaming que realizamos y contar con un medio de comunicación e integración de los red teamers y sus labores.
+
+También, es importante considerar cuáles son los objetivos principales de un ejercicio de red teaming que son medir el :
+- TTD (Time To Detect) : Tiempo para Detectar
+- TTM (Time To Mitigate) : Tiempo para Mitigar
 
 En un principio se aplicó unicamente el gráfico que se observa abajo y se han desarrollado documentos (en formato markdown) independientes que se comparten entre los red teamers.
 
