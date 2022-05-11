@@ -30,7 +30,9 @@ Existen muchas aplicaciones que pueden ser utilizadas para estos fines, sin emba
 
 Este módulo es el filtro final antes de continuar con la **REVISIÓN DE TÁCTICAS** y es donde se pueden realizar algunas acciones que no sean pasivas, pero, que tampoco despierten alertas tempranas.
 Por ejemplo, la obtención de screenshots de servidores web expuestos es una acción que debe ser parte del módulo de **RECON**, pero, el determinar si la calidad es la adecuada o no, si se deben incluir screenshots adicionales del mismo URL base (como aquellos generados por mensajes de error) o incluir el fuente de la página, entre otros, corresponden a esta etapa.
+
 Otra acción puede corresponder con el concepto tradicional de enumeración (como se lleva a cabo en un pentest cuando se enumeran usuarios, grupos, roles,etc.), pero, se debe analizar muy bien el hecho que estas actividades dejan registros sin importar de que se trata.  Es decir, una enumeración de usuarios de un sistema operativo o de un servicio de nube, debe dejar registros auditables.
+
 El motivador para querer realizar una enumeración de este tipo es que el feedback para las Tácticas propuestas será importantísimo. Por ejemplo, cuando se han obtenido credenciales de un servicio de nube durante el **RECON** y se puede intentar hacer enumeración de identidades y recursos.
 
 ## REVIEW TACTICS (REVISIÓN DE TÁCTICAS)
