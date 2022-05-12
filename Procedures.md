@@ -74,6 +74,3 @@ Existen técnicas diversas para permitir que la permanencia sea obtenida y la m�
 
 La exfiltración es un paso "final" en toda esta etapa, es decir, dado que el objetivo de la simulación de adversario es comportarse lo más cercano al atacante real, se debe proveer una forma para extraer la data a la cual se va oteniendo acceso
 El conocimiento sobre el uso de protocolos/servicio específicos como el DNS,ICMP, etc. para ejecutar la exfiltración esta bien difundido.  Entonces, lo que se peuden puntualizar son los medios que se emplee.  Por ejemplo,  es muy frecuente que los servidores DNS interno que se usan para el AD, tengan implementado el forwarding de queries hacia Internet.
-
-desapercibio a lo largo de toda la etapa
-evitar acciones que quedan registradas en los logs o mas eficiente es tomar control de los logs
