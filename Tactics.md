@@ -44,4 +44,4 @@ Incluso, es el que, finalmente, determinará el tipo de red teamers que serán a
 
 Las Tácticas deben permitir hacer un cambio rapido ante situaciones esperadas (cuando se sabe que se realizará alguna acción activa que generará ruido) o inesperadas como el comportamiento de elementos de protección bien establecidos/configurados.
 
-Finalmente, el resultado de esta etapa es un conjunto documento de Tácticas a emplear en los módulos posteriores y en acciones comúnes como el Compromiso Inicial, la Instalación (incluyendo las Tácticas de OpSec que deben ser empleadas), el Desplazamiento Lateral, la Persistencia y Permanencia, la Exfiltración.
+Finalmente, el resultado de esta etapa es un conjunto documentado de Tácticas a emplear en los módulos posteriores y en acciones comúnes como el Compromiso Inicial, la Instalación (incluyendo las Tácticas de OpSec que deben ser empleadas), el Desplazamiento Lateral, la Persistencia y Permanencia, la Exfiltración.
