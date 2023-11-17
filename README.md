@@ -26,4 +26,4 @@ Este repositorio es un primer esfuerzo en compartir ésta documentación, pero, 
 3. Execute Procedures. (https://github.com/Open-Sec/RedTeaming/blob/main/Procedures.md)
 4. Real Goal. (https://github.com/Open-Sec/RedTeaming/blob/main/Goal.md)
 
-![Red Teaming Framework by Open-Sec](https://github.com/Open-Sec/RedTeaming/blob/main/redteaming-framework.png)
+![Red Teaming Framework by Open-Sec](https://github.com/Open-Sec/RedTeaming/blob/main/redteaming-framework-2.png)
