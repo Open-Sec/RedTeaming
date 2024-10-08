@@ -1,29 +1,28 @@
-# Marco de Referencia de Operaciones tipo Red Teaming por Open-Sec
+# Red Team Framework by Open-Sec
 
-Teniendo claramente establecida la diferencia entre Emulación de Amenazas y Simulación de Adversarios, este framework fue desarrollado por el team de Open-Sec como una forma de estandarizar las acciones realizadas durante las operaciones de red teaming que realizamos y contar con un medio de comunicación e integración de los red teamers y sus labores.
+Once the difference between Threat Emulation and Adversary Simulation is clearly stablished, this framework was developed by the Open-Sec team as a way to standardize the actions carried out during the red teaming operations that we carry out and to have a means of communication and integration of the red teamers and their work.
 
-También, es importante considerar cuáles son los objetivos principales de un ejercicio de red teaming que son medir el :
-- TTD (Time To Detect) : Tiempo para Detectar
-- TTM (Time To Mitigate) : Tiempo para Mitigar
+Also, it is important to consider what the main objectives of a red teaming exercise are, which are to measure the:
+- TTD (Time To Detect): Time to Detect
+- TTM (Time To Mitigate): Time to Mitigate
 
-Es importante reconocer que Mitre ha popularizado la terminología de TTP (Tactic, Techniques, Procedures) mediante su framework ATT&CK (https://attack.mitre.org/).
+It is important to recognize that Mitre has popularized the TTP (Tactics, Techniques, Procedures) terminology through its ATT&CK framework (https://attack.mitre.org/).
+- At the same time, it is important to be clear about some aspects of the red teaming field:
+- An attacker will not use the documented TTPs that a Blue Team will take as a reference, at least not use them as they have been documented exactly. It would be absurd for attackers to do what defenders expect.
+- An attacker can use TTPs as a reference, but never follow them strictly, especially since not all organizations are the same and their levels of maturity in security management are not the same either.
+- A framework like ATT&CK is very suitable for carrying out Threat Emulation exercises that can start in the form of "table top exercises" and conclude with real operations for specific scenarios and cases as exercises that accompany the maturity of security management.
 
-Al mismo tiempo, es importante tener claros algunos aspectos del ambito del red teaming :
-- Un atacante no utilizará las TTPs documentadas y que un Blue Team tomará como referencia, al menos no las usará como se han documentado de forma exacta.  Seria absurdo que los atacantes hagan lo que esperan los defensores.
-- Un atacante puede tomar como referencia las TTPs, pero, nunca seguirlas de forma estricta y sobre todo debido a que no toda organización es igual y que sus niveles de madurez en la gestión de la seguridad tampoco lo son.
-- Un framework como ATT&CK es muy adecuado para realizar ejercicios de Emulación de Amenazas que puede iniciar en la forma de "table top exercises" y concluir con operaciones reales para escenarios y casos específicos como ejercicios que acompañen durante la maduración de la gestión de la seguridad.
-- Existen varios frameworks para red teaming, unos más desarrollados que otros y algunos basados en sectores específicos.  Todos ellos apuntan a establecer pasos claros y específicos en la gestión de los ejercicios de red teaming y sus resultados.
+There are several frameworks for red teaming, some more developed than others and some based on specific sectors. All of them aim to establish clear and specific steps in the management of red teaming exercises and their results.
 
-En un principio se aplicó unicamente el gráfico que se observa abajo y se han desarrollado documentos (en formato markdown) independientes que se comparten entre los red teamers.
+Initially, only the graph shown below was applied and independent documents (in markdown format) have been developed that are shared among red teamers.
+Additionally, this framework has been used in the training provided by Open-Sec to, implicitly, guide the red teaming exercises appropriately among the participants. This repository is a first effort to share this documentation, but in an organized way.
 
-Adicionalmente, se ha empleado este framework en los entrenamientos provistos por Open-Sec para, de forma implícita, orientar los ejercicios de red teaming adecuadamente entre los participantes.
-Este repositorio es un primer esfuerzo en compartir ésta documentación, pero, de una forma organizada.
-
-*No pretende ser de una guía completa o un libro o una metodología o un framework que incluya todo lo existente y lo que está por existir, solamente es un conjunto de información a la cual acudir por un ordenamiento secuencial de pasos y algunas ideas que se van modificando en el tiempo (sea por obsolescencia o por mejoras).*
+**It is not intended to be a complete guide or a book or a methodology or a framework that includes everything that exists and what is yet to come, it is only a set of information to refer to by a sequential order of steps and some ideas that are modified over time (either due to obsolescence or improvements).**
 
 1. Verification of Proper Tactics. (https://github.com/Open-Sec/RedTeaming/blob/main/Tactics.md)
 2. Definition of Techniques. (https://github.com/Open-Sec/RedTeaming/blob/main/Techniques.md)
 3. Execute Procedures. (https://github.com/Open-Sec/RedTeaming/blob/main/Procedures.md)
 4. Real Goal. (https://github.com/Open-Sec/RedTeaming/blob/main/Goal.md)
+
 
 ![Red Teaming Framework by Open-Sec](https://github.com/Open-Sec/RedTeaming/blob/main/redteaming-framework-2.png)
