@@ -1,47 +1,42 @@
-# VERIFICATION OF PROPER TACTICS (VERIFICACIÓN DE TÁCTICAS ADECUADAS)
+# Verification of Proper Tactics
 
-Puesto que la estrategia ya debe estar definida a este punto y que la misma depende del alcance acordado para el ejercicio de red teaming, el framework de Open-Sec se enfoca en ordenar las acciones concretas operativas.
-Aunque no necesariamente se pueden aplicar todos estos módulos porque dependerán del tipo de ejercicio y escenario a desarrollar, son comúnes y útiles todos ellos.
+Since the strategy should already be defined at this point and it depends on the scope agreed upon for the red teaming exercise, the Open-Sec framework focuses on ordering the specific operational actions. Although not all of these modules can necessarily be applied because they will depend on the type of exercise and scenario to be developed, all of them are common and useful.
 
-Por esas razones, el realizar un **RECON** adecuado es lo más importante en toda operación de forma que las Tácticas tradicionales sean modificadas para que puedan ser aplicadas de forma exitosa o utilizar aquellas Tácticas que no son explotadas comunmente e, incluso, puede llevar a proponer Tácticas completamente nuevas.
-Por ejemplo, aún los ejercicios de red teaming se relacionan mucho a quebrar la seguridad a nivel de infraestructura y no de aplicaciones.  Conseguir un "compromiso inicial" a través de las aplicaciones tiene la ventaja que casi todas requieren acceso al core de la data y aplicaciones de integración y que, además, su protección y monitoreo son menos maduros que los empleados con respecto a la infraestructura.
+For these reasons, carrying out an adequate **RECON** is the most important thing in any operation so that traditional Tactics can be modified so that they can be successfully applied or utilize those tactics that are not commonly exploited and may even lead to proposing entirely new tactics. For example, even red teaming exercises are closely related to breaking security at the infrastructure level and not at the application level. Getting an "initial commitment" through applications has the advantage that almost all of them require access to the core of the data and integration applications and that, in addition, their protection and monitoring are less mature than those used with respect to the infrastructure.
 
-La **ENUMERACION** es una tarea de ordenamiento y preparación para uso posterior de la información acopiada y analizada. 
-También, puede incluir acciones que no vayan en contra del caracter pasivo de esta etapa o de hacerlo, sean generadoras de registros comúnes (que por su abundancia son ignorados) o registros poco convencionales (que sean ignorados por desconocimiento de los mismos).
+**ENUMERATION** is a task of organizing and preparing the information collected and analyzed for later use. It may also include actions that do not go against the passive nature of this stage or, if they do, generate common records (which are ignored due to their abundance) or unconventional records (which are ignored due to lack of knowledge of them).
 
-Finalmente, la **REVISIÓN DE TÁCTICAS** permitirá conocer sí se requiere obtener más información o información diferente o de fuente diferente.  Por ejemplo, el análisis de documentación encontrada en Internet puede confrimar que una buena opción para el compromiso inicial puede ser la red Wi-Fi de la organización o el colocar una red Wi-Fi falsa a la cual se conecten los usuarios.  Esto determina que se requiere un conocimiento de la seguridad física establecida en la organización y una visita del perímtero físico serán requeridos.
-También, es válido que se adicionen Tácticas, que se descarten las definidas o que se modifiquen.
+Finally, the **REVIEW OF TACTICS** will allow us to know if more information or different information or information from a different source is required. For example, the analysis of documentation found on the Internet can confirm that a good option for the initial compromise may be the organization's Wi-Fi network or the installation of a false Wi-Fi network to which users connect. This determines that knowledge of the physical security established in the organization is required and a visit to the physical perimeter will be required. It is also valid to add Tactics, discard those defined or modify them.
 
-## RECON (RECOINNASSENCE - RECONOCIMIENTO)
+## RECON (RECONNAISSANCE)
 
-Este módulo desarrolla las mismas acciones que un Pentest con diferencias que resultan importantes :
+This module develops the same actions as a Pentest with important differences:
 
-- En un Pentest, se puede realizar un acopio amplio de información respecto a una organización, pero, dado que los alcances son sumamente acotados, puede terminar siendo una perdida de tiempo ya que dicha información no será empleada.
-- Una de las grandes diferencias en el **RECON** durante un ejercicio de red teaming es que se hará búsqueda de documentos no solo para extraer metadata si no, también, para revisar el contenido de los documentos respecto a información úitl para el ejercicio o que represente una divulgación de datos importantes.
-- Otra de las grandes diferencias es que se le otorga un mayor tiempo porque constituye las bases del ejercicio y el conocimiento que se requiere sobre la organización.  Es importante recordar que una operación real de red teaming es acerca de datos y los procesos que los manejan, no solo de tecnología.  De hecho, el tiempo asignado puede alcanzar el 30% o más de todo el ejercicio.
-- La información divulgada como resultado de la explotación de brechas de seguridad explotadas no es solamente reportada a la organización evaluda si no tomada como insumo importante en el resto de acciones de la operación. Esto incluye código fuente de aplicaciones y documentos que no sean unicamente de uso interno.
+- In a Pentest, a broad collection of information regarding an organization can be carried out, but, given that the scope is extremely limited, it can end up being a waste of time since said information will not be used.
+- One of the big differences in the **RECON** during a red teaming exercise is that a search will be made for documents not only to extract metadata but also to review the content of the documents regarding information useful for the exercise or that represents a disclosure of important data.
+- Another of the big differences is that more time is given because it constitutes the bases of the exercise and the knowledge required about the organization. It is important to remember that a real red teaming operation is about data and the processes that manage it, not just about technology. In fact, the time allocated can reach 30% or more of the entire exercise.
+- The information disclosed as a result of exploiting security breaches is not only reported to the organization being evaluated but is also taken as an important input for the rest of the operation's actions. This includes application source code and documents that are not solely for internal use.
 
-Por ello, este módulo implica que no solamente se realiza un acopio de información si no que la misma debe ser analizada de acuerdo a los objetivos del ejercicio luego de una cuidadosa revisión y ponderación.
+Therefore, this module implies that not only is information collected but that it must be analyzed according to the objectives of the exercise after careful review and consideration
 
-## ENUMERATION (ENUMERACIÓN)
+## ENUMERATION
 
-La cantidad de informacion que se puede obtener determina la necesidad de compilarla en una forma adecuada para el desarrollo de las otras etapas del ejercicio y ello implica disponer de formas en las que esta información sea de fácil acceso y pueda ser sometida a búsquedas diversas de forma rapida y simple.
-Existen muchas aplicaciones que pueden ser utilizadas para estos fines, sin embargo, cualquier forma práctica es válida.  Por ejemplo, disponer de una base de datos SQLite con campos BLOB (para almacenar imágenes) ayudará a realizar búsquedas con un lenguaje tan popular como el SQL y acceder a los detalles de cada información obtenida más allá del lo básico (un nombre de archivo, un URL, un nombre de usuario, un email, contraseñas divulgadas, etc.) incluyendo otros elementos no básicos (comentarios hechos por quien obtuvo la información, screenshots, categoría, etc.)
+The amount of information that can be obtained determines the need to compile it in a form suitable for the development of the other stages of the exercise and this implies having ways in which this information is easily accessible and can be subjected to various searches quickly and simply. There are many applications that can be used for these purposes, however, any practical form is valid. For example, having an SQLite database with BLOB fields (to store images) will help to perform searches with a language as popular as SQL and access the details of each information obtained beyond the basics (a file name, a URL, a user name, an email, disclosed passwords, etc.) including other non-basic elements (comments made by whoever obtained the information, screenshots, category, etc.)
 
-Este módulo es el filtro final antes de continuar con la **REVISIÓN DE TÁCTICAS** y es donde se pueden realizar algunas acciones que no sean pasivas, pero, que tampoco despierten alertas tempranas.
-Por ejemplo, la obtención de screenshots de servidores web expuestos es una acción que debe ser parte del módulo de **RECON**, pero, el determinar si la calidad es la adecuada o no, si se deben incluir screenshots adicionales del mismo URL base (como aquellos generados por mensajes de error) o incluir el fuente de la página, entre otros, corresponden a esta etapa.
+This module is the final filter before continuing with the **TACTICS REVIEW** and is where some actions can be carried out that are not passive, but that do not raise early warnings either. For example, obtaining screenshots of exposed web servers is an action that should be part of the **RECON** module, but determining whether the quality is adequate or not, whether additional screenshots of the same base URL should be included (such as those generated by error messages) or including the source of the page, among others, correspond to this stage.
 
-Otra acción puede corresponder con el concepto tradicional de enumeración (como se lleva a cabo en un pentest cuando se enumeran usuarios, grupos, roles,etc.), pero, se debe analizar muy bien el hecho que estas actividades dejan registros sin importar de que se trata.  Es decir, una enumeración de usuarios de un sistema operativo o de un servicio de nube, debe dejar registros auditables.
+Another action may correspond to the traditional concept of enumeration (as carried out in a pentest when users, groups, roles, etc. are enumerated), but the fact that these activities leave records regardless of what they are about must be carefully analyzed. That is, an enumeration of users of an operating system or a cloud service must leave auditable records.
 
-El motivador para querer realizar una enumeración de este tipo es que el feedback para las Tácticas propuestas será importantísimo. Por ejemplo, cuando se han obtenido credenciales de un servicio de nube durante el **RECON** y se puede intentar hacer enumeración de identidades y recursos.
+The motivation for wanting to carry out an enumeration of this type is that the feedback for the proposed Tactics will be very important. For example, when credentials of a cloud service have been obtained during the **RECON** and an attempt can be made to enumerate identities and resources.
 
-## REVIEW TACTICS (REVISIÓN DE TÁCTICAS)
+## REVIEW TACTICS
 
-Idealmente, los módulos anteriores han servido para confirmar las Tácticas propuestas, pero, en el mundo real este módulo sirve para mejoralas, corregirlas, descartarlas o crear nuevas.
+Ideally, the previous modules have served to confirm the proposed Tactics, but in the real world this module serves to improve, correct, discard or create new ones.
 
-Si bien es cierto que no hay una secuencia estricta en la aplicacion de cada etapa (se puede subir y bajar según se requiera), este módulo deberá servir para continuar de manera firme con el resto de etapas.  
-Incluso, es el que, finalmente, determinará el tipo de red teamers que serán asignados, su cantidad, durante cuánto tiempo, en qué etapa o módulo y qué acciones específicas ejecutarán (la parte **teaming** del ejercicio).
+While it is true that there is no strict sequence in the application of each stage (you can go up and down as required), this module should serve to continue steadily with the rest of the stages.
 
-Las Tácticas deben permitir hacer un cambio rapido ante situaciones esperadas (cuando se sabe que se realizará alguna acción activa que generará ruido) o inesperadas como el comportamiento de elementos de protección bien establecidos/configurados.
+In fact, it is the one that will ultimately determine the type of red teamers that will be assigned, their quantity, for how long, in which stage or module and what specific actions they will execute (the **teaming** part of the exercise).
 
-Finalmente, el resultado de esta etapa es un conjunto documentado de Tácticas a emplear en los módulos posteriores y en acciones comúnes como el Compromiso Inicial, la Instalación (incluyendo las prácticas de DevOps y OpSec que deben ser empleadas), el Desplazamiento Lateral, la Persistencia y Permanencia, la Exfiltración.
+Tactics should allow for a quick change in expected situations (when it is known that some active action will be carried out that will generate noise) or unexpected situations such as the behavior of well-established/configured protection elements.
+
+Finally, the result of this stage is a documented set of Tactics to be used in subsequent modules and in common actions such as Initial Engagement, Installation (including DevOps and OpSec practices that must be employed), Lateral Movement, Persistence and Permanence, Exfiltration.
