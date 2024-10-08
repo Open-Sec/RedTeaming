@@ -1,6 +1,6 @@
 # Red Team Framework by Open-Sec
 
-Once the difference between Threat Emulation and Adversary Simulation is clearly stablished, this framework was developed by the Open-Sec team as a way to standardize the actions carried out during the red teaming operations that we carry out and to have a means of communication and integration of the red teamers and their work.
+Once the difference between Threat Emulation and Adversary Simulation is clearly understood, this framework was developed by the Open-Sec team as a way to standardize the actions carried out during the red teaming operations that we carry out and to have a means of communication and integration of the red teamers and their work.
 
 Also, it is important to consider what the main objectives of a red teaming exercise are, which are to measure the:
 - TTD (Time To Detect): Time to Detect
