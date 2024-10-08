@@ -1,4 +1,4 @@
-# Red Teaming Framework by Open-Sec
+# Marco de Referencia para Operaciones tipo Red Team por Open-Sec
 
 Teniendo claramente establecida la diferencia entre Emulación de Amenazas y Simulación de Adversarios, este framework fue desarrollado por el team de Open-Sec como una forma de estandarizar las acciones realizadas durante las operaciones de red teaming que realizamos y contar con un medio de comunicación e integración de los red teamers y sus labores.
 
