@@ -12,7 +12,7 @@ También, puede incluir acciones que no vayan en contra del caracter pasivo de e
 Finalmente, la **REVISIÓN DE TÁCTICAS** permitirá conocer sí se requiere obtener más información o información diferente o de fuente diferente.  Por ejemplo, el análisis de documentación encontrada en Internet puede confrimar que una buena opción para el compromiso inicial puede ser la red Wi-Fi de la organización o el colocar una red Wi-Fi falsa a la cual se conecten los usuarios.  Esto determina que se requiere un conocimiento de la seguridad física establecida en la organización y una visita del perímtero físico serán requeridos.
 También, es válido que se adicionen Tácticas, que se descarten las definidas o que se modifiquen.
 
-## RECON (RECOINNASSANCE - RECONOCIMIENTO)
+## RECON (RECONOCIMIENTO)
 
 Este módulo desarrolla las mismas acciones que un Pentest con diferencias que resultan importantes :
 
@@ -23,7 +23,7 @@ Este módulo desarrolla las mismas acciones que un Pentest con diferencias que r
 
 Por ello, este módulo implica que no solamente se realiza un acopio de información si no que la misma debe ser analizada de acuerdo a los objetivos del ejercicio luego de una cuidadosa revisión y ponderación.
 
-## ENUMERATION (ENUMERACIÓN)
+## ENUMERACIÓN
 
 La cantidad de informacion que se puede obtener determina la necesidad de compilarla en una forma adecuada para el desarrollo de las otras etapas del ejercicio y ello implica disponer de formas en las que esta información sea de fácil acceso y pueda ser sometida a búsquedas diversas de forma rapida y simple.
 Existen muchas aplicaciones que pueden ser utilizadas para estos fines, sin embargo, cualquier forma práctica es válida.  Por ejemplo, disponer de una base de datos SQLite con campos BLOB (para almacenar imágenes) ayudará a realizar búsquedas con un lenguaje tan popular como el SQL y acceder a los detalles de cada información obtenida más allá del lo básico (un nombre de archivo, un URL, un nombre de usuario, un email, contraseñas divulgadas, etc.) incluyendo otros elementos no básicos (comentarios hechos por quien obtuvo la información, screenshots, categoría, etc.)
@@ -35,7 +35,7 @@ Otra acción puede corresponder con el concepto tradicional de enumeración (com
 
 El motivador para querer realizar una enumeración de este tipo es que el feedback para las Tácticas propuestas será importantísimo. Por ejemplo, cuando se han obtenido credenciales de un servicio de nube durante el **RECON** y se puede intentar hacer enumeración de identidades y recursos.
 
-## REVIEW TACTICS (REVISIÓN DE TÁCTICAS)
+## REVISIÓN DE TÁCTICAS
 
 Idealmente, los módulos anteriores han servido para confirmar las Tácticas propuestas, pero, en el mundo real este módulo sirve para mejoralas, corregirlas, descartarlas o crear nuevas.
 
