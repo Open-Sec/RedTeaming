@@ -1,25 +1,22 @@
-# REAL GOAL (META REAL)
+# REAL GOAL
 
-La meta real depende de la organización evaluada y esta puede ser expreada de forma escuta o muy detallada, pero, de ninguna forma es una garantía que la operación de red teaming se realizará de una forma específica.
+The actual goal depends on the organization being evaluated and can be expressed in a very brief or detailed manner, but it is by no means a guarantee that the red teaming operation will be carried out in a specific way.
 
-Es importante entender que un ejercicio de red teaming surge como la necesidad de someter a pruebas menos protocolares y sin aviso detallado a quienes manejan TI y menos a los que manejan la seguridad (sean internos y/o externos).
-En ese sentido, el mapeo de los resultados a procesos de la organización y los activos de información afectados, es la forma más adecuada de hacer una revisión el red y blue teams en conjunto.
+It is important to understand that a red teaming exercise arises as a need to subject those who manage IT and even less those who manage security (whether internal and/or external) to less protocolary tests without detailed notice. In this sense, mapping the results to the organization's processes and the affected information assets is the most appropriate way to review the red and blue teams as a whole.
 
-## ANALIZE TTD,TTM AND OTHER ELEMENTS (ANALIZAR TTD, TTM Y OTROS ELEMENTOS)
+## ANALIZE TTD, TTM AND OTHER ELEMENTS 
 
-Se deben analizar las detecciones producidas durante el desarrollo de la operación llegando a determinar detecciones completas o parciales así como mitigaciones completas o parciales.
-Dentro de ese aspecto, la medición del tiempo requerido para ellos debe ser mapeada al tiempo de afectación a los procesos de negocio.
+Detections produced during the development of the operation must be analyzed, determining complete or partial detections as well as complete or partial mitigations. Within this aspect, the measurement of the time required for them must be mapped to the time of impact on business processes.
 
-Otros elementos de análisis pueden ser :
+Other elements of analysis may be:
+- The good or bad operation of the SOC
+- Evaluate the performance of the Blue Team (external and/or internal)
+- Evaluate the efficiency and effectiveness of technological protection tools (especially those based on ML and/or AI, etc.)
 
-- El buen o mal funcionamiento del SOC
-- Evaluar el desempeño del Blue Team (externo y/o interno)
-- Evaluar la eficiencia y eficacia de herramientas tecnológicas de prrotección (sobre todo las basadas en ML y/o AI, etc.)
+## REPORT
 
-## REPORT (REPORTAR)
+It should consist of a descriptive narrative of the process carried out that allows us to understand the sequence of actions executed, including those that were not successful. In this way, we can have clear indicators to improve the functioning of the implemented security components and determine which ones should be added or, even, which ones should be eliminated for being inefficient and/or ineffective.
 
-Debe consistir en una narrativa descriptiva del proceso llevado a cabo que permita entender la secuencia de acciones ejecutadas incluyendo aquellas que no fueron exitosas. Así se pueden tener indicadores claros para mejorar el funcionamiento de los componentes de seguridad implementados y determinar cuáles deben adicionarse o, incluso, cuales deben eliminarse por ser ineficientes y/o ineficaces.
+Finally, this report becomes a kind of SWOT document that should provide the necessary elements to improve security not only in the assurance aspect but also in the way in which other security tests performed more frequently are conducted, such as pentests.
 
-Finalmente, este reporte se convierte en una suerte de documento FODA que debe proveer los elementos necesarios para mejorar la seguridad no solamente en el aspecto de aseguramiento si no también en la forma en la que se conducen otras pruebas de seguridad realizadas con más frecuencia como los pentest.
-
-Existen algunas herramientas que permiten condensar toda esta información y obtener comparativas y tendencias para apoyar en la gestión.
+There are some tools that allow us to condense all this information and obtain comparisons and trends to support management.
