@@ -38,7 +38,6 @@ Listar todos los posibles tipos de **COMPROMISO INICIAL** no solamente escapa a 
 Sin embargo, podemos ver que los más comúnes son :
 
 - Mediante las aplicaciones web.  Principalmente en el software de base usado en ellas que conduce a RCE o vulnerabilidades en la implementación de funcionalidades que permiten obtener un control total de la información. Como valor agregado, el monitoreo de incidentes que ha evolucionado es el que se da a nivel de infraestructura, el de aplicación está atrasado y de ninguna forma integrado con el resto de la gestión de la seguridad en forma adecuada.
-web.
 - Mediante servicios en nube que conducen hacia el core de la organización porque aún se encuentra basado en equipos legacy por decisión permanente o porque se encuentran en migración.  Otras condiciones de servicios en nube no son eticamente aprovechables, pero, el mundo de ataques reales si puede hacer uso de ellas como en los casos de SaaS inseguro.
 - Escape de las "sandboxes" impuestas por los clientes delgados.
 - Accesso remotos via VPN (sobre todo los webvpn).
