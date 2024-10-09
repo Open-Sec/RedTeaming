@@ -1,76 +1,65 @@
-# EXECUTE PROCEDURES (EJECUCIÓN DE PROCEDIMIENTOS)
+# EXECUTE PROCEDURES
 
-Esta es la etapa de ejecución de acciones de la operación y las variantes son muchas por varios factores que se pueden resumir en dos :
+This is the stage of executing the operation's actions and there are many variants due to several factors that can be summarized in two:
+Due to the results of the previous stages.
 
-- Por los resultados de las etapas anteriores.
-- Por el tipo de escenario a desarrollar.  
+Due to the type of scenario to be developed.
 
-De la forma más simple, los escenarios a desarrollar dependen del requerimiento específico de la organización a evaluar o del entendimiento del red team respecto a qué es lo mas adecuado.  Puede ser más complejo sí se consideran servicios recurrente o contínuos y más aún en los permanentes.
+In the simplest form, the scenarios to be developed depend on the specific requirement of the organization to be evaluated or the understanding of the red team regarding what is most appropriate. It can be more complex if recurring or continuous services are considered and even more so in permanent ones.
 
-Tres escenarios típicos son :
+Three typical scenarios are:
+- Full Commitment
+- Assumed Breach
+- Customized Breach
+  
+Here you can see a difference with previous stages since the **ATTACK VECTOR DESIGN** gives off two parallel sequences:
+- **INITIAL COMMITMENT**
+- **INSTALLATION**
 
-- Compromiso Completo
-- Brecha Asumida
-- Brecha Personalizada
+Beyond the considerations indicated above, it is always considered that there will be an **INITIAL COMPROMISE** which is the starting point of all the actions of the current exercise even if it does not correspond to a Full Commitment.
 
-Aca se puede ver una diferencia con etapas anteriores dado que el **DISEÑO DE VECTORES DE ATAQUE** desprende dos secuencias en paralelo :
+The **INSTALLATION** module consists of all the actions necessary to have a Command and Control Center (C2) in the proper way. The simplicity or complexity of it was defined in the **VERIFICATION OF PROPER TECHNIQUES** stage.
 
-- **COMPROMISO INICIAL**
-- **INSTALACIÓN**
+The other two modules, **LATERAL MOVEMENT** and **STAY AND EXFILTRATE** are given as a natural, but ordered consequence of the previous modules.
+It is not intelligent to think that having obtained a "foot" (however highly privileged) inside an organization, one will not consider entering with the entire "body" and this is what gives rise to the displacement in a natural way, but, it is an action that allows obtaining the desired permanence within the organization for actions such as the exfiltration of information.
 
-Más allá de las consideraciones indicadas anteriormente, siempre se considera que habrá un **COMPROMISO INICIAL** que es el punto de partida de todas las acciones del ejercicio en curso así no corresponda a un Compromiso Completo.
 
-El módulo de **INSTALACIÓN** consiste en todas las acciones necesarias para tener un Centro de Comando y Control (C2) de la forma adecuada.
-La simplicidad o complejidad del mismo fue definida en la etapa de **VERIFICACIÓN DE TÉCNICAS ADECUADAS**.
+## INITIAL COMPROMISE
 
-Los otros dos módulos, **DESPLAZAMIENTO LATERAL** y **PERMANECER Y EXFILTRAR** se dan como una consecuencia natural, pero, ordenada de los módulos anteriores.  
-No resulta inteligente pensar que habiendo conseguido un "pie" (por más que sea altamente privilegiado) dentro de una organización, no se va a considerar ingresar con el "cuerpo" entero y esto es lo que da pie al desplazamiento de forma natural, pero, es una acción que permite obtener la permanencia deseada dentro de la organización para acciones como la exfiltración de información.
+Regardless of the scenarios to be developed, there should always be several **INITIAL COMPROMISE** alternatives and, if possible, more than one of the same type. The reasons are diverse, but, again, they can be summarized in two:
+- No matter how much planning has been done, some conditions can change while the actions of the operation are being executed.
+- Distraction, such as when an "attack" is generated using insecure protocols that send/receive everything in plain text and at the same time a real attack is executed.
+  
+Listing all the possible types of **INITIAL COMPROMISE** not only goes beyond this framework but would be pretentious in trying to pigeonhole the reality of organizations into a typology. Being somewhat philosophical, the Hegelian dialectic is perfectly applied here, summarized, in a colloquial way, in the fact that no one bathes twice in the same river. However, we can see that the most common are:
+- Through web applications. Mainly in the base software used in them that leads to RCE or vulnerabilities in the implementation of functionalities that allow obtaining total control of the information. As added value, the monitoring of incidents that has evolved is that which is given at the infrastructure level, the application level is outdated and in no way integrated with the rest of the security management in an adequate manner.
+- Through cloud services that lead to the core of the organization because it is still based on legacy equipment by permanent decision or because they are in migration. Other conditions of cloud services are not ethically exploitable, but the world of real attacks can make use of them as in the cases of insecure SaaS.
+- Escape from the "sandboxes" imposed by thin clients.
+- Remote access via VPN (especially webvpn).
+- Wireless networks that radiate their signal outside the physical perimeter of the offices of the evaluated organization.
+- Client Side Attacks (CSA) that start with actions such as phishing in a more common way.
+- Social engineering including physical intrusion.
 
-## INITIAL COMPROMISE (COMPROMISO INICIAL)
+## INSTALLATION
 
-Sin importar los escenarios a desarrollar, siempre se deben tener varias alternativas de **COMPROMISO INICIAL** y, de ser posible más de una del mismo tipo.
-Las razones son diversas, pero, nuevamente se pueden resumir en dos :
+This module must ensure that the operation has at least one reliable C2 and attack infrastructure, and that this determines that installations, configurations, high availability must be implemented, and threat management actions must be carried out by the evaluated organization.
 
-- Por mas planeamiento que se haya realizado, algunas condiciones pueden cambiar mientras se ejecutan las acciones de la operación.
-- Distracción como cuando se genera un "ataque" usando protocolos inseguros que envian/reciben todo en texto plano y al mismo tiempo se ejecuta un ataque real.
+There is no C2 that is suitable for every operation, but there are some functionalities that are required, such as allowing resilience in the implants when they are detected/mitigated, providing concealment mechanisms, allowing customization at any level, including the modification/addition of payloads/implants and their forms of concealment. The latter is very important because C2s are often expected to be an accurate, successful and inexhaustible source of payloads, and their function is not to be anything other than a form of support for the ongoing operation.
 
-Listar todos los posibles tipos de **COMPROMISO INICIAL** no solamente escapa a este framework si no que sería pretensioso al pretender encasillar la realidad de las organizaciones en una tipología.  Siendo algo filosóficos, acá se aplica perfectamente la dialéctica hegeliana resumida, de forma coloquial, en el hecho que nadie se baña dos veces en un mismo rio.
-Sin embargo, podemos ver que los más comúnes son :
+However, all this infrastructure can fail or be "mitigated" and the need to quickly have a new one becomes evident. This is what leads us to have to automate the **INSTALLATION** process through IaC or, more properly, to use DevOps and OpSec.
 
-- Mediante las aplicaciones web.  Principalmente en el software de base usado en ellas que conduce a RCE o vulnerabilidades en la implementación de funcionalidades que permiten obtener un control total de la información. Como valor agregado, el monitoreo de incidentes que ha evolucionado es el que se da a nivel de infraestructura, el de aplicación está atrasado y de ninguna forma integrado con el resto de la gestión de la seguridad en forma adecuada.
-web.
-- Mediante servicios en nube que conducen hacia el core de la organización porque aún se encuentra basado en equipos legacy por decisión permanente o porque se encuentran en migración.  Otras condiciones de servicios en nube no son eticamente aprovechables, pero, el mundo de ataques reales si puede hacer uso de ellas como en los casos de SaaS inseguro.
-- Escape de las "sandboxes" impuestas por los clientes delgados.
-- Accesso remotos via VPN (sobre todo los webvpn).
-- Redes inalámbricas que irradían su señal hasta fuera del perímetro físico de las oficinas de la organización evaluada.
-- Ataques de Lado Cliente (CSA) que arrancen con acciones como el phishing de manera más común.
-- Ingeniería social que incluye intrusión física.
+In the aspect of complementary infrastructure, there are diverse requirements that depend on each type of action. For example, if phishing is an option, it is necessary to configure services, domains, generate reputation, etc. well in advance of the execution of the sending of messages and that determines infrastructure that must be so reliable that it overcomes the controls of modern email services.
 
-## INSTALLATION (INSTALACIÓN)
+## LATERAL MOVEMENT
 
-Este módulo debe garantizar que la operación disponga de al menos un C2 e infraestructura de ataque confiables y eso determina que se deben realizar instalaciones, configuraciones, implementar alta disponibilidad, detectar acciones de la gestión de amenazas que debe llevar a cabo la organización evaluada.
+The forms of lateral displacement based on vulnerabilities in MS Windows systems are widely documented and controlled at the same time. The same occurs with failures in base services such as Active Directory and they are usually more frequent.
 
-No hay un C2 que sea adecuado para toda operación, pero, si hay algunas funcionalidades que son requridas como permitir resilencia en los implantes ante la detección/mitigación de los mismos, proveer mecanismos de encubrimiento, permitir que se realice personalización a cualquier nivel incluyendo la modificación/adición de payload/implantes y sus formas de encubrimiento.
-Esto último es bien importante porque con frecuencia se espera que los C2 sean una fuente exacta, exitosa e inagotable de payloas y no es su función si no ser un forma de soporte a la operación en curso.
+On the other hand, systems based on Linux or MacOS are usually perceived as less insecure in terms of software vulnerabilities, but equally prone to configuration failures or inadequate maintenance. In this area, favorable conditions will be given for lateral displacement that do not depend on updates or secure configurations because there is embedded technology that will not progress in the security aspect due to the manufacturer's decision. Thus, the components of a video surveillance system based on a reduced version of Linux help a lot in this module.
 
-Sin embargo, toda esta infraestructura puede fallar o ser "mitigada" y la necesidad de disponer rapidamente de una nueva, se hace evidente.  Esto es lo que nos lleva a tener que automatizar el proceso de **INSTALACIÓN** mediante IaC o, más propiamente, a emplear la DevOps y OpSec.
+Internal applications are also a source of support in lateral displacement because they are usually considered to be less risky due to their "location" condition in a private network, which allows the use of obsolete versions of base software or less (or no) effort has been made to make it secure or they reside in legacy systems.
 
-En el aspecto de infraestructura complementaria se tienen requerimientos divesos que depende de cada tipo de acción.
-Por ejemplo, si el phishing será una opción, se requiere configurar servicios, dominios, generar reputación, etc. con una buena anticipación a la ejecución del envío de mensajes y eso determina infraestructura que debe ser tan confiable que supere los controles de los servicios de correo electrónico modernos.
 
-## LATERAL MOVEMENT (DESPLAZAMIENTO LATERAL)
+## STAY AND EXFILTRATE
 
-Las formas de desplazamiento lateral en función de vulnerabilidades en sistemas MS Windows está ampliamente documentada y controlada al mismo tiempo. Con las fallas en servicios de base como el Active Directory ocurre lo mismo y suelen ser más frecuentes.
+At this stage, actions are executed to allow persistence in the computers where the implants have been placed (for example when they are rebooted) and to maintain the penetration obtained (if a zombie/agent/implant is discovered and eliminated). There are various techniques to allow permanence to be obtained and the best known is the one that implements a daisy chain mechanism.
 
-Por otro lado, los sistemas basado en Linux o MacOS suelen ser percibidos como menos inseguros en términos de vulnerabilidades del software, pero, igual de proclives a fallas de configuraciones o mantenimientos inadecuados.
-En este terreno se van a dar condiciones favorables para el desplazamiento lateral que no dependen de las actualizaciones o configuraciones seguras porque se tiene tecnología embebida que no progresará en el aspecto de seguridad por decisión del fabricante.  Así, los componentes de un sistema de videovigilancia basado en una versión reducida de Linux, ayudan mucho en este módulo.
-
-Las aplicaciones internas también son una fuente de apoyo en el desplazamiento lateral porque suelen ser consideradas como de menos riesgo por su condición de "ubicación" en una red privada, con lo cual, se permite el uso de versiones obsoletas de software de base o se han realizado menos (o ningun) esfuerzo porque sea segura o residen en sistemas legacy.
-
-## STAY AND EXFILTRATE (PERMANECER Y EXFILTRAR)
-
-En esta etapa se ejecutan las acciones que permitan persistir en los equipos donde han colocado los implantes (por ejemplo cuando son reiniciados) y mantener la penetración obtenida (sí un zombie/agente/implante es descubierto y eliminado).
-Existen técnicas diversas para permitir que la permanencia sea obtenida y la más conocida es la que implementa un mecanismo de daisy chain.
-
-La exfiltración es un paso "final" en toda esta etapa, es decir, dado que el objetivo de la simulación de adversario es comportarse lo más cercano al atacante real, se debe proveer una forma para extraer la data a la cual se va oteniendo acceso
-El conocimiento sobre el uso de protocolos/servicio específicos como el DNS,ICMP, etc. para ejecutar la exfiltración esta bien difundido.  Entonces, lo que se peuden puntualizar son los medios que se emplee.  Por ejemplo,  es muy frecuente que los servidores DNS interno que se usan para el AD, tengan implementado el forwarding de queries hacia Internet.
+Exfiltration is a "final" step in this whole stage, that is, since the objective of the adversary simulation is to behave as close as possible to the real attacker, a way must be provided to extract the data to which access is being obtained. Knowledge about the use of specific protocols/services such as DNS, ICMP, etc. to execute exfiltration is well disseminated. Therefore, what can be specified are the means used. For example, it is very common for internal DNS servers used for AD to have query forwarding implemented towards the Internet.
