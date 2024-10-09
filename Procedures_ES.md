@@ -1,6 +1,6 @@
 # EJECUCIÓN DE PROCEDIMIENTOS
 
-]Esta es la etapa de ejecución de acciones de la operación y las variantes son muchas por varios factores que se pueden resumir en dos :
+Esta es la etapa de ejecución de acciones de la operación y las variantes son muchas por varios factores que se pueden resumir en dos :
 
 - Por los resultados de las etapas anteriores.
 - Por el tipo de escenario a desarrollar.  
